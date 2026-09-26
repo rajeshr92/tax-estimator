@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Federal Tax Planner — 2026</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<style>
+  * { box-sizing: border-box; } body { margin: 0; }
+  input, select, button { font-family: inherit; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+/* Shim Claude's storage API onto the browser's localStorage so inputs
+   persist between sessions on this machine. */
+window.storage = {
+  async get(k)    { const v = localStorage.getItem(k); return v == null ? null : { key: k, value: v }; },
+  async set(k, v) { localStorage.setItem(k, v); return { key: k, value: v }; },
+  async delete(k) { localStorage.removeItem(k); return { key: k, deleted: true }; },
+};
+</script>
+<script>

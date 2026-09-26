@@ -1,0 +1,13 @@
+{
+  "name": "tax-estimator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "2026 federal tax withholding vs. liability planner — flags under-withholding and IRS underpayment-penalty risk. Runs entirely in the browser.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  }
+}
